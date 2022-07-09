@@ -131,8 +131,8 @@ class MainMenuState extends MusicBeatState
 		}
 		
 		  if (firstStart) {
-		  	FlxTween.tween(blackbars2, {y: 0}, 0.3, {ease: FlxEase.expoInOut});
-				FlxTween.tween(blackbars, {y: 0}, 0.3, {ease: FlxEase.expoInOut});
+		  	FlxTween.tween(blackbars2, {y: 0}, 1, {ease: FlxEase.expoInOut});
+				FlxTween.tween(blackbars, {y: 0}, 1, {ease: FlxEase.expoInOut});
 				}
 
 		firstStart = false;
