@@ -74,7 +74,7 @@ class MainMenuState extends MusicBeatState
 		add(bg);
 		
     var blackbars:FlxSprite = new FlxSprite();
-    blackbars.loadGraphic("preload/images/menushits/titleoutline1.png");
+    blackbars.loadGraphic(Paths.image('menushits/titleoutline1'));
     blackbars.y = -300;
 		blackbars.scrollFactor.x = 0.9;
 		blackbars.scrollFactor.y = 0.9;
@@ -83,7 +83,7 @@ class MainMenuState extends MusicBeatState
     add(blackbars);
     
     var blackbars2:FlxSprite = new FlxSprite();
-    blackbars2.loadGraphic("preload/images/menushits/titleoutline2.png");
+    blackbars2.loadGraphic(Paths.image('menushits/titleoutline2'));
     blackbars2.y = 300;
 		blackbars2.scrollFactor.x = 0.9;
 		blackbars2.scrollFactor.y = 0.9;
