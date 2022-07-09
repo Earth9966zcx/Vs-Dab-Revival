@@ -79,28 +79,24 @@ class MainMenuState extends MusicBeatState
     add(blackbars2);
     
     
-		var bg:FlxSprite = new FlxSprite(-100).loadGraphic(Paths.image('menuBG'));
-		bg.scrollFactor.x = 0;
-		bg.scrollFactor.y = 0.10;
-		bg.setGraphicSize(Std.int(bg.width * 1.1));
+		var bg:FlxSprite = new FlxSprite(0, 0);
+		bg.loadGraphic(Paths.image('menushits/BG'));
+		bg.scrollFactor.set();
 		bg.updateHitbox();
 		bg.screenCenter();
-		bg.antialiasing = true;
 		add(bg);
 		
 
 		camFollow = new FlxObject(0, 0, 1, 1);
 		add(camFollow);
 
-		magenta = new FlxSprite(-80).loadGraphic(Paths.image('menuDesat'));
-		magenta.scrollFactor.x = 0;
-		magenta.scrollFactor.y = 0.10;
-		magenta.setGraphicSize(Std.int(magenta.width * 1.1));
-		magenta.updateHitbox();
-		magenta.screenCenter();
+		magenta = new FlxSprite(-80);
+		magenta.loadGraphic(Paths.image('menushits/BGDesat'));
 		magenta.visible = false;
-		magenta.antialiasing = true;
 		magenta.color = 0xFFfd719b;
+		magenta.scrollFactor.set();
+		magenta.screenCenter();
+		magenta.updateHitbox();
 		add(magenta);
 		// magenta.scrollFactor.set();
 
