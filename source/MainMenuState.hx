@@ -125,7 +125,7 @@ class MainMenuState extends MusicBeatState
 				   {
 						finishedFunnyMove = true; 
 						changeItem();
-  				}}});
+  				}});
 			else
 				menuItem.y = 60 + (i * 160);
 		}
