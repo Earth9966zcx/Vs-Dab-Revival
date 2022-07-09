@@ -64,6 +64,27 @@ class MainMenuState extends MusicBeatState
 
 		persistentUpdate = persistentDraw = true;
 
+    
+    
+		var bg:FlxSprite = new FlxSprite(0, 0);
+		bg.loadGraphic(Paths.image('menushits/BG'));
+		bg.scrollFactor.set();
+		bg.updateHitbox();
+		bg.screenCenter();
+		add(bg);
+
+		camFollow = new FlxObject(0, 0, 1, 1);
+		add(camFollow);
+
+	  var	magenta:FlxSprite = new FlxSprite(0, 0);
+		magenta.loadGraphic(Paths.image('menushits/BGDesat'));
+		magenta.visible = false;
+		magenta.color = 0xFFfd719b;
+		magenta.scrollFactor.set();
+		magenta.screenCenter();
+		magenta.updateHitbox();
+		add(magenta);
+		
     var blackbars:FlxSprite = new FlxSprite(0, -500);
     blackbars.loadGraphic(Paths.image('menushits/titleoutline1'));
 		blackbars.scrollFactor.set();
@@ -77,28 +98,6 @@ class MainMenuState extends MusicBeatState
 		blackbars2.updateHitbox();
 		blackbars2.screenCenter(X);
     add(blackbars2);
-    
-    
-		var bg:FlxSprite = new FlxSprite(0, 0);
-		bg.loadGraphic(Paths.image('menushits/BG'));
-		bg.scrollFactor.set();
-		bg.updateHitbox();
-		bg.screenCenter();
-		add(bg);
-		
-
-		camFollow = new FlxObject(0, 0, 1, 1);
-		add(camFollow);
-
-		magenta = new FlxSprite(-80);
-		magenta.loadGraphic(Paths.image('menushits/BGDesat'));
-		magenta.visible = false;
-		magenta.color = 0xFFfd719b;
-		magenta.scrollFactor.set();
-		magenta.screenCenter();
-		magenta.updateHitbox();
-		add(magenta);
-		// magenta.scrollFactor.set();
 
 		menuItems = new FlxTypedGroup<FlxSprite>();
 		add(menuItems);
