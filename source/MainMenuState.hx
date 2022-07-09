@@ -73,17 +73,15 @@ class MainMenuState extends MusicBeatState
 		bg.antialiasing = true;
 		add(bg);
 		
-    var blackbars:FlxSprite = new FlxSprite();
+    var blackbars:FlxSprite = new FlxSprite(0, -500);
     blackbars.loadGraphic(Paths.image('menushits/titleoutline1'));
-    blackbars.y = -300;
 		blackbars.scrollFactor.set();
 		blackbars.updateHitbox();
 		blackbars.screenCenter(X);
     add(blackbars);
     
-    var blackbars2:FlxSprite = new FlxSprite();
+    var blackbars2:FlxSprite = new FlxSprite(0, 500);
     blackbars2.loadGraphic(Paths.image('menushits/titleoutline2'));
-    blackbars2.y = 300;
 		blackbars2.scrollFactor.set();
 		blackbars2.updateHitbox();
 		blackbars2.screenCenter(X);
