@@ -122,8 +122,8 @@ class MainMenuState extends MusicBeatState
 			menuItem.antialiasing = true;
 			if (firstStart)
 				FlxTween.tween(menuItem,{y: 60 + (i * 160)},1 + (i * 0.25) ,{ease: FlxEase.expoInOut, onComplete: function(flxTween:FlxTween)
-				FlxTween.tween(blackbars2, {y: 0 }, 0.3, {ease:FlxEase.expoInOut);
-				FlxTween.tween(blackbars, {y: 0 }, 0.3, {ease:FlxEase.expoInOut);
+				FlxTween.tween(blackbars2, {y: 0 }, 0.3, {ease: FlxEase.expoInOut);
+				FlxTween.tween(blackbars, {y: 0 }, 0.3, {ease: FlxEase.expoInOut);
 					{ 
 						finishedFunnyMove = true; 
 						changeItem();
