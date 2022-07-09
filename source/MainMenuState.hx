@@ -46,6 +46,8 @@ class MainMenuState extends MusicBeatState
 
 	var magenta:FlxSprite;
 	var camFollow:FlxObject;
+	var blackbars:FlxSprite;
+	var blackbars2:FlxSprite;
 	public static var finishedFunnyMove:Bool = false;
 
 	override function create()
@@ -70,6 +72,20 @@ class MainMenuState extends MusicBeatState
 		bg.screenCenter();
 		bg.antialiasing = true;
 		add(bg);
+		
+    var blackbars:FlxSprite; = new FlxSprite();
+    blackbars.loadGraphic("menushits/titleoutline1.png");
+    blackbars.y = -300;
+		blackbars.updateHitbox();
+		blackbars.screenCenter(X);
+    add(blackbars);
+    
+    var blackbars2:FlxSprite; = new FlxSprite();
+    blackbars2.loadGraphic("menushits/titleoutline2.png");
+    blackbars2.y = 300;
+		blackbars2.updateHitbox();
+		blackbars2.screenCenter(X);
+    add(blackbars2);
 
 		camFollow = new FlxObject(0, 0, 1, 1);
 		add(camFollow);
@@ -99,12 +115,15 @@ class MainMenuState extends MusicBeatState
 			menuItem.animation.addByPrefix('selected', optionShit[i] + " white", 24);
 			menuItem.animation.play('idle');
 			menuItem.ID = i;
-			menuItem.screenCenter(X);
+			//menuItem.screenCenter(X);
+			menuItem.x += 700;
 			menuItems.add(menuItem);
 			menuItem.scrollFactor.set();
 			menuItem.antialiasing = true;
 			if (firstStart)
-				FlxTween.tween(menuItem,{y: 60 + (i * 160)},1 + (i * 0.25) ,{ease: FlxEase.expoInOut, onComplete: function(flxTween:FlxTween) 
+				FlxTween.tween(menuItem,{y: 60 + (i * 160)},1 + (i * 0.25) ,{ease: FlxEase.expoInOut, onComplete: function(flxTween:FlxTween)
+				FlxTween.tween(blackbars2, { x: 0, y: 0 }, 0.3, {ease:FlxEase.expoInOut});
+				FlxTween.tween(blackbars, { x: 0, y: 0 }, 0.3, {ease:FlxEase.expoInOut});
 					{ 
 						finishedFunnyMove = true; 
 						changeItem();
@@ -219,7 +238,7 @@ class MainMenuState extends MusicBeatState
 
 		menuItems.forEach(function(spr:FlxSprite)
 		{
-			spr.screenCenter(X);
+			//spr.screenCenter(X);
 		});
 	}
 	
