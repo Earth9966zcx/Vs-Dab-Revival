@@ -64,15 +64,6 @@ class MainMenuState extends MusicBeatState
 
 		persistentUpdate = persistentDraw = true;
 
-		var bg:FlxSprite = new FlxSprite(-100).loadGraphic(Paths.image('menuBG'));
-		bg.scrollFactor.x = 0;
-		bg.scrollFactor.y = 0.10;
-		bg.setGraphicSize(Std.int(bg.width * 1.1));
-		bg.updateHitbox();
-		bg.screenCenter();
-		bg.antialiasing = true;
-		add(bg);
-		
     var blackbars:FlxSprite = new FlxSprite(0, -500);
     blackbars.loadGraphic(Paths.image('menushits/titleoutline1'));
 		blackbars.scrollFactor.set();
@@ -86,6 +77,17 @@ class MainMenuState extends MusicBeatState
 		blackbars2.updateHitbox();
 		blackbars2.screenCenter(X);
     add(blackbars2);
+    
+    
+		var bg:FlxSprite = new FlxSprite(-100).loadGraphic(Paths.image('menuBG'));
+		bg.scrollFactor.x = 0;
+		bg.scrollFactor.y = 0.10;
+		bg.setGraphicSize(Std.int(bg.width * 1.1));
+		bg.updateHitbox();
+		bg.screenCenter();
+		bg.antialiasing = true;
+		add(bg);
+		
 
 		camFollow = new FlxObject(0, 0, 1, 1);
 		add(camFollow);
