@@ -47,7 +47,8 @@ class MainMenuState extends MusicBeatState
 	var camFollow:FlxObject;
 	var blackbars:FlxSprite;
 	var blackbars2:FlxSprite;
-	var dabmorbin:FlxSprite;
+	var randomChar:FlxSprite;
+	var randomCharInt:Int = FlxG.random.int(1, 2);
 	public static var finishedFunnyMove:Bool = false;
 
 	override function create()
@@ -91,14 +92,12 @@ class MainMenuState extends MusicBeatState
 		blackbars2.screenCenter(X);
     add(blackbars2);
     
-    var dabmorbin:FlxSprite = new FlxSprite(999, 0);
-    dabmorbin.frames = Paths.getSparrowAtlas('menushits/Spritesheet');
-    dabmorbin.animation.addByPrefix('dancin', 'gfDance', 24);
-    dabmorbin.animation.play('dancin');
-    dabmorbin.scale.set(0.5, 0.5);
-		dabmorbin.scrollFactor.set();
-		dabmorbin.updateHitbox();
-    add(dabmorbin);
+    var randomChar:FlxSprite = new FlxSprite(1280, 0);
+    randomChar.loadGraphic(Paths.image('menushits/charMenu')+randomCharInt);
+    randomChar.scale.set(0.5, 0.5);
+		randomChar.scrollFactor.set();
+		randomChar.updateHitbox();
+    add(randomChar);
 
 		menuItems = new FlxTypedGroup<FlxSprite>();
 		add(menuItems);
@@ -132,7 +131,7 @@ class MainMenuState extends MusicBeatState
 		  if (firstStart) {
 		  	FlxTween.tween(blackbars2, {y: 0}, 1, {ease: FlxEase.expoInOut});
 				FlxTween.tween(blackbars, {y: 0}, 1, {ease: FlxEase.expoInOut});
-				FlxTween.tween(dabmorbin, {x: 0}, 1, {ease: FlxEase.expoInOut});
+				FlxTween.tween(randomChar, {x: 0}, 1, {ease: FlxEase.expoInOut});
 				}
 
 		firstStart = false;
