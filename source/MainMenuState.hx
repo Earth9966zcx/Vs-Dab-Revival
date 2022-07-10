@@ -113,7 +113,7 @@ class MainMenuState extends MusicBeatState
 			menuItem.animation.play('idle');
 			menuItem.ID = i;
 			//menuItem.screenCenter(X);
-			menuItem.x += 700;
+			menuItem.x += 100;
 			menuItems.add(menuItem);
 			menuItem.scrollFactor.set();
 			menuItem.antialiasing = true;
