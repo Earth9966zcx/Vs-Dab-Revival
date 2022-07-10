@@ -137,13 +137,13 @@ class MainMenuState extends MusicBeatState
 				menuItem.y = 60 + (i * 160);
 		}
 		
-		  if (firstStart)
+		  if (firstStart) {
 		  	FlxTween.tween(blackbars2, {y: 0}, 1, {ease: FlxEase.expoInOut});
 				FlxTween.tween(blackbars, {y: 0}, 1, {ease: FlxEase.expoInOut});
 				FlxTween.tween(randomChar, {x: 0}, 1, {ease: FlxEase.expoInOut});
 				{
 				  sus = true;
-				}});
+				}
 		else
       blackbars.x += 0
       blackbars2.x += 0
