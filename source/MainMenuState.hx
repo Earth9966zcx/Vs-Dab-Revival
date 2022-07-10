@@ -77,9 +77,8 @@ class MainMenuState extends MusicBeatState
 		add(camFollow);
 
 	  var	magenta:FlxSprite = new FlxSprite(0, 0);
-		magenta.loadGraphic(Paths.image('menushits/BGDesat'));
+		magenta.loadGraphic(Paths.image('menushits/BGMagenta'));
 		magenta.visible = false;
-		magenta.color = 0xFFfd719b;
 		magenta.scrollFactor.set();
 		magenta.screenCenter();
 		magenta.updateHitbox();
@@ -204,7 +203,7 @@ class MainMenuState extends MusicBeatState
 					{
 						if (curSelected != spr.ID)
 						{
-            FlxTween.tween(spr, {alpha: 0}, 1.3, {
+              FlxTween.tween(spr, {alpha: 0}, 1.3, {
 								ease: FlxEase.quadOut,
 								onComplete: function(twn:FlxTween)
 								{
