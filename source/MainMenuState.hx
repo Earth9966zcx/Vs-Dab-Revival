@@ -44,7 +44,6 @@ class MainMenuState extends MusicBeatState
 	public static var kadeEngineVer:String = "1.5.3" + nightly;
 	public static var gameVer:String = "0.2.7.1";
 
-	var magenta:FlxSprite;
 	var camFollow:FlxObject;
 	var blackbars:FlxSprite;
 	var blackbars2:FlxSprite;
@@ -77,13 +76,6 @@ class MainMenuState extends MusicBeatState
 		camFollow = new FlxObject(0, 0, 1, 1);
 		add(camFollow);
 
-	  var	magenta:FlxSprite = new FlxSprite(0, 0);
-		magenta.loadGraphic(Paths.image('menushits/BGMagenta'));
-		magenta.visible = false;
-		magenta.scrollFactor.set();
-		magenta.screenCenter();
-		magenta.updateHitbox();
-		add(magenta);
 		
     var blackbars:FlxSprite = new FlxSprite(0, -500);
     blackbars.loadGraphic(Paths.image('menushits/titleoutline1'));
@@ -208,9 +200,6 @@ class MainMenuState extends MusicBeatState
 					selectedSomethin = true;
 					FlxG.sound.play(Paths.sound('confirmMenu'));
 					
-					if (FlxG.save.data.flashing)
-						FlxFlicker.flicker(magenta, 1.1, 0.15, false);
-
 					menuItems.forEach(function(spr:FlxSprite)
 					{
 						if (curSelected != spr.ID)
