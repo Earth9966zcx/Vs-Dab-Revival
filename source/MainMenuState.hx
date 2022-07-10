@@ -49,7 +49,12 @@ class MainMenuState extends MusicBeatState
 	var blackbars2:FlxSprite;
 	var randomChar:FlxSprite;
 	var sus:Bool = false;
-	var pathShits:String = 'menushits/menuArts/charMenu' + (FlxG.random.int(1, 2));
+	
+	var pathShits:Array<String> = [
+	  'menushits/menuArts/menuChar1',
+	  'menushits/menuArts/menuChar2'
+  ]; //dab if you see this, add your string to the image path lol
+  
 	public static var finishedFunnyMove:Bool = false;
 
 	override function create()
@@ -94,7 +99,7 @@ class MainMenuState extends MusicBeatState
     add(blackbars2);
     
     var randomChar:FlxSprite = new FlxSprite(1280, 0);
-    randomChar.loadGraphic(Paths.image(pathShits));
+    randomChar.loadGraphic(Paths.image(imgList[FlxG.random.int(0, imgList.length - 1)])));
     randomChar.scale.set(0.5, 0.5);
     randomChar.scale.set(0.5, 0.5);
 		randomChar.scrollFactor.set();
