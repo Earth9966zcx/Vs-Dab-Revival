@@ -48,7 +48,8 @@ class MainMenuState extends MusicBeatState
 	var blackbars:FlxSprite;
 	var blackbars2:FlxSprite;
 	var randomChar:FlxSprite;
-	var randomCharInt:Int = FlxG.random.int(1, 2);
+	var sus:Bool = false;
+	var pathShits:String = 'menushits/menuArts/charMenu' + (FlxG.random.int(1, 2);
 	public static var finishedFunnyMove:Bool = false;
 
 	override function create()
@@ -93,7 +94,8 @@ class MainMenuState extends MusicBeatState
     add(blackbars2);
     
     var randomChar:FlxSprite = new FlxSprite(1280, 0);
-    randomChar.loadGraphic(Paths.image('menushits/menuArts/charMenu')+randomCharInt);
+    randomChar.loadGraphic(Paths.image(pathShits));
+    randomChar.scale.set(0.5, 0.5);
     randomChar.scale.set(0.5, 0.5);
 		randomChar.scrollFactor.set();
 		randomChar.updateHitbox();
@@ -128,11 +130,17 @@ class MainMenuState extends MusicBeatState
 				menuItem.y = 60 + (i * 160);
 		}
 		
-		  if (firstStart) {
+		  if (firstStart)
 		  	FlxTween.tween(blackbars2, {y: 0}, 1, {ease: FlxEase.expoInOut});
 				FlxTween.tween(blackbars, {y: 0}, 1, {ease: FlxEase.expoInOut});
 				FlxTween.tween(randomChar, {x: 0}, 1, {ease: FlxEase.expoInOut});
-				}
+				{
+				  sus = true;
+				}});
+		else
+      blackbars.x += 0
+      blackbars2.x += 0
+  }
 
 		firstStart = false;
 
