@@ -143,11 +143,11 @@ class MainMenuState extends MusicBeatState
 				FlxTween.tween(randomChar, {x: 0}, 1, {ease: FlxEase.expoInOut});
 				{
 				  sus = true;
-				}
+				}}
 		  else
-        blackbars.x += 0
-        blackbars2.x += 0
-  }
+        blackbars.x += 0;
+        blackbars2.x += 0;
+  {
 
 		firstStart = false;
 
