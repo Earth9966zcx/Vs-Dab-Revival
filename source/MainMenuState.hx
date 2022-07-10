@@ -49,7 +49,7 @@ class MainMenuState extends MusicBeatState
 	var blackbars2:FlxSprite;
 	var randomChar:FlxSprite;
 	var sus:Bool = false;
-	var pathShits:String = 'menushits/menuArts/charMenu' + (FlxG.random.int(1, 2);
+	var pathShits:String = 'menushits/menuArts/charMenu' + (FlxG.random.int(1, 2));
 	public static var finishedFunnyMove:Bool = false;
 
 	override function create()
