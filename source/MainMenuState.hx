@@ -103,9 +103,9 @@ class MainMenuState extends MusicBeatState
     dabmorbin.frames = Paths.getSparrowAtlas('menushits/Spritesheet');
     dabmorbin.animation.addByPrefix('dancin', 'gfDance', 24);
     dabmorbin.animation.play('dancin');
+    dabmorbin.scale.set(0.5, 0.5);
 		dabmorbin.scrollFactor.set();
 		dabmorbin.updateHitbox();
-		dabmorbin.screenCenter(X);
     add(dabmorbin);
 
 		menuItems = new FlxTypedGroup<FlxSprite>();
