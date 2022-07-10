@@ -48,6 +48,7 @@ class MainMenuState extends MusicBeatState
 	var camFollow:FlxObject;
 	var blackbars:FlxSprite;
 	var blackbars2:FlxSprite;
+	var dabmorbin:FlxSprite;
 	public static var finishedFunnyMove:Bool = false;
 
 	override function create()
@@ -97,6 +98,15 @@ class MainMenuState extends MusicBeatState
 		blackbars2.updateHitbox();
 		blackbars2.screenCenter(X);
     add(blackbars2);
+    
+    var dabmorbin:FlxSprite = new FlxSprite(999, 0);
+    dabmorbin.frames = Paths.getSparrowAtlas('menushits/Spritesheet');
+    dabmorbin.animation.addByPrefix('dancin', 'gfDance', 24);
+    dabmorbin.animation.play('dancin');
+		dabmorbin.scrollFactor.set();
+		dabmorbin.updateHitbox();
+		dabmorbin.screenCenter(X);
+    add(dabmorbin);
 
 		menuItems = new FlxTypedGroup<FlxSprite>();
 		add(menuItems);
@@ -112,9 +122,10 @@ class MainMenuState extends MusicBeatState
 			menuItem.animation.play('idle');
 			menuItem.ID = i;
 			//menuItem.screenCenter(X);
-			menuItem.x += 100;
+			menuItem.x += 700;
 			menuItems.add(menuItem);
 			menuItem.scrollFactor.set();
+			menuItem.scale.set(0.8, 0.8);
 			menuItem.antialiasing = true;
 			if (firstStart)
 				FlxTween.tween(menuItem,{y: 60 + (i * 160)},1 + (i * 0.25) ,{ease: FlxEase.expoInOut, onComplete: function(flxTween:FlxTween)
@@ -129,6 +140,7 @@ class MainMenuState extends MusicBeatState
 		  if (firstStart) {
 		  	FlxTween.tween(blackbars2, {y: 0}, 1, {ease: FlxEase.expoInOut});
 				FlxTween.tween(blackbars, {y: 0}, 1, {ease: FlxEase.expoInOut});
+				FlxTween.tween(dabmorbin, {x: 0}, 1, {ease: FlxEase.expoInOut});
 				}
 
 		firstStart = false;
