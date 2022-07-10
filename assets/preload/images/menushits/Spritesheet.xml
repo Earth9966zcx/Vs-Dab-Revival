@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="">
+	<!-- Created with Free Tex Packer
+Generator by Poyo!!
+Edit by Aba (based on that one tutorial with flipaclip)-->
+	<SubTexture name="gfDance0001" x="0" y="0" width="700" height="700"/>
+	<SubTexture name="gfDance0002" x="0" y="700" width="700" height="700"/>
+	<SubTexture name="gfDance0003" x="700" y="0" width="700" height="700"/>
+	<SubTexture name="gfDance0004" x="700" y="700" width="700" height="700"/>
+	<SubTexture name="gfDance0005" x="1400" y="0" width="700" height="700"/>
+	<SubTexture name="gfDance0006" x="1400" y="700" width="700" height="700"/>
+	<SubTexture name="vpose0000" x="2100" y="0" width="700" height="700"/>
+	<SubTexture name="vpose0001" x="2100" y="700" width="700" height="700"/>
+	<SubTexture name="vpose0002" x="2800" y="0" width="700" height="700"/>
+</TextureAtlas>
