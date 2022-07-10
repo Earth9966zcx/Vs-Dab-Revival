@@ -55,7 +55,7 @@ class MainMenuState extends MusicBeatState
 	  'menushits/menuArts/menuChar2'
   ]; //dab if you see this, add your string to the image path lol
 
-  var doitBitch = pathShits[FlxG.random.int(0, pathShits.length - 1)]);;
+  var doitBitch = pathShits[FlxG.random.int(0, pathShits.length - 1)];
   
 	public static var finishedFunnyMove:Bool = false;
 
@@ -101,7 +101,7 @@ class MainMenuState extends MusicBeatState
     add(blackbars2);
     
     var randomChar:FlxSprite = new FlxSprite(1280, 0);
-    randomChar.loadGraphic(Paths.image(doitBitch));
+    randomChar.loadGraphic(Paths.image(pathShits[FlxG.random.int(0, pathShits.length - 1)]));
     randomChar.scale.set(0.5, 0.5);
     randomChar.scale.set(0.5, 0.5);
 		randomChar.scrollFactor.set();
