@@ -144,9 +144,9 @@ class MainMenuState extends MusicBeatState
 				{
 				  sus = true;
 				}
-		else
-      blackbars.x += 0
-      blackbars2.x += 0
+		  else
+        blackbars.x += 0
+        blackbars2.x += 0
   }
 
 		firstStart = false;
