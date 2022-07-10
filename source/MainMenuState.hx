@@ -55,7 +55,7 @@ class MainMenuState extends MusicBeatState
 	  'menushits/menuArts/menuChar2'
   ]; //dab if you see this, add your string to the image path lol
 
-  var doitBitch = pathShits[FlxG.random.int(0, pathShits.length - 1)]);
+  var doitBitch = pathShits[FlxG.random.int(0, pathShits.length - 1)]);;
   
 	public static var finishedFunnyMove:Bool = false;
 
