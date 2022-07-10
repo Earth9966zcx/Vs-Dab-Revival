@@ -93,7 +93,7 @@ class MainMenuState extends MusicBeatState
     add(blackbars2);
     
     var randomChar:FlxSprite = new FlxSprite(1280, 0);
-    randomChar.loadGraphic(Paths.image('menushits/charMenu')+randomCharInt);
+    randomChar.loadGraphic(Paths.image('menushits/menuArts/charMenu')+randomCharInt);
     randomChar.scale.set(0.5, 0.5);
 		randomChar.scrollFactor.set();
 		randomChar.updateHitbox();
