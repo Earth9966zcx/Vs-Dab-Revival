@@ -204,9 +204,10 @@ class MainMenuState extends MusicBeatState
 					{
 						if (curSelected != spr.ID)
 						{
-							FlxTween.tween(spr, {alpha: 0}, 1.3, {ease: FlxEase.quadOut, onComplete: function(twn1:FlxTween));
-				      FlxTween.tween(blackbars, {y: -500}, 1, {ease: FlxEase.expoInOut, onComplete: function(twn2:FlxTween));
-						  FlxTween.tween(blackbars2, {y: 500}, 1, {ease: FlxEase.expoInOut, onComplete: function(twn3:FlxTween));
+							FlxTween.tween(spr, {alpha: 0}, 1.3, {ease: FlxEase.quadOut});
+				      FlxTween.tween(blackbars, {y: -500}, 1, {ease: FlxEase.expoInOut});
+						  FlxTween.tween(blackbars2, {y: 500}, 1, {ease: FlxEase.expoInOut,
+						  onComplete: function(twn:FlxTween));
 								{
 									spr.kill();
 								}
