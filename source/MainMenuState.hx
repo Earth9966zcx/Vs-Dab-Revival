@@ -164,17 +164,19 @@ super.create();
 		switch (FlxG.random.int(1, 6))
             {
             case 1:
-    var char:FlxSprite = new FlxSprite(1289, 0);
+    var char:FlxSprite = new FlxSprite(1280, 0);
     char.loadGraphic(Paths.image('menushits/menuArts/menuChar1'));
 		char.scrollFactor.set();
-		char.scale.set(0.5, 0.5)
+		char.scale.set(0.5, 0.5);
+		char.updateHitbox();
     add(char);
 
             case 2:
     var char:FlxSprite = new FlxSprite(1280, 0);
     char.loadGraphic(Paths.image('menushits/menuArts/menuChar2'));
-		char.scrollFactor.set
-		char.scale.set(0.5, 0.5)
+		char.scrollFactor.set();
+		char.scale.set(0.5, 0.5);
+		char.updateHitbox();
     add(char);
             }
   }
