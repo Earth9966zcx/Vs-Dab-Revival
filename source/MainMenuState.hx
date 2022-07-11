@@ -168,7 +168,6 @@ super.create();
     char.loadGraphic(Paths.image('menushits/menuArts/menuChar1'));
 		char.scrollFactor.set();
 		char.scale.set(0.5, 0.5)
-		char.updateHitbox();
     add(char);
 
             case 2:
@@ -176,7 +175,6 @@ super.create();
     char.loadGraphic(Paths.image('menushits/menuArts/menuChar2'));
 		char.scrollFactor.set
 		char.scale.set(0.5, 0.5)
-		char.updateHitbox();
     add(char);
             }
   }
