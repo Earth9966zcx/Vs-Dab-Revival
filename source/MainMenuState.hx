@@ -162,7 +162,7 @@ class MainMenuState extends MusicBeatState
     super.create();
     
 		 switch (FlxG.random.int(1, 2))
-  }
+     }
   case 1:
 			      char = new FlxSprite(1280, 0);//put your cords and image here
             char.loadGraphic(Paths.image('menushits/menuArts/menuChar1');//here put the name of the xml
@@ -175,9 +175,9 @@ class MainMenuState extends MusicBeatState
 			      char.scrollFactor.set();
 		        char.updateHitbox();
 			      add(char);
-	     }
-}
-end#
+	          }
+    }
+    end#
 	
 		super.create();
 	}
