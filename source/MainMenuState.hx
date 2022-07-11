@@ -47,16 +47,10 @@ class MainMenuState extends MusicBeatState
 	var camFollow:FlxObject;
 	var blackbars:FlxSprite;
 	var blackbars2:FlxSprite;
-	var randomChar:FlxSprite;
+	var char:FlxSprite;
 	var sus:Bool = false;
 	
-	var pathShits:Array<String> = [
-	  'menushits/menuArts/menuChar1',
-	  'menushits/menuArts/menuChar2'
-  ]; //dab if you see this, add your string to the image path lol
 
-  var doitBitch = pathShits[FlxG.random.int(0, pathShits.length - 1)];
-  
 	public static var finishedFunnyMove:Bool = false;
 
 	override function create()
@@ -100,13 +94,6 @@ class MainMenuState extends MusicBeatState
 		blackbars2.screenCenter(X);
     add(blackbars2);
     
-    var randomChar:FlxSprite = new FlxSprite(1280, 0);
-    randomChar.loadGraphic(Paths.image(pathShits[FlxG.random.int(0, pathShits.length - 1)]));
-    randomChar.scale.set(0.5, 0.5);
-    randomChar.scale.set(0.5, 0.5);
-		randomChar.scrollFactor.set();
-		randomChar.updateHitbox();
-    add(randomChar);
 
 		menuItems = new FlxTypedGroup<FlxSprite>();
 		add(menuItems);
@@ -140,7 +127,7 @@ class MainMenuState extends MusicBeatState
 		  if (firstStart) {
 		  	FlxTween.tween(blackbars2, {y: 0}, 1, {ease: FlxEase.expoInOut});
 				FlxTween.tween(blackbars, {y: 0}, 1, {ease: FlxEase.expoInOut});
-				FlxTween.tween(randomChar, {x: 0}, 1, {ease: FlxEase.expoInOut});
+				FlxTween.tween(char, {x: 0}, 1, {ease: FlxEase.expoInOut});
 				{
 				  sus = true;
 				}}
@@ -171,7 +158,27 @@ class MainMenuState extends MusicBeatState
 		#if android
 		addVirtualPad(UP_DOWN, A_B);
 		#end
-
+		
+    super.create();
+    
+		 switch (FlxG.random.int(1, 2))
+  }
+  case 1:
+			      char = new FlxSprite(1280, 0);//put your cords and image here
+            char.loadGraphic(Paths.image('menushits/menuArts/menuChar1');//here put the name of the xml
+			      char.scrollFactor.set();
+		        char.updateHitbox();
+			      add(char);
+  case 2:
+			      char = new FlxSprite(1280, 0);//put your cords and image here
+            char.loadGraphic(Paths.image('menushits/menuArts/menuChar2');//here put the name of the xml
+			      char.scrollFactor.set();
+		        char.updateHitbox();
+			      add(char);
+	     }
+}
+end#
+	
 		super.create();
 	}
 
@@ -275,6 +282,20 @@ class MainMenuState extends MusicBeatState
 		}
 	}
 
+		super.create();
+
+		switch (FlxG.random.int(1, 2))
+            {
+            case 1:
+			char = new FlxSprite(1280, 0).loadGraphic(Paths.image(''));//put your cords and image here
+			char.frames = Paths.getSparrowAtlas('mainmenu/hellron');//here put the name of the xml
+			char.animation.addByPrefix('idleR', 'idle normal', 24, true);//on 'idle normal' change it to your xml one
+			char.animation.play('idleR');//you can rename the anim however you want to
+			char.scrollFactor.set();
+			FlxG.sound.play(Paths.sound('appear'), 2);
+			char.antialiasing = ClientPrefs.globalAntialiasing;
+			add(char);
+			
 	function changeItem(huh:Int = 0)
 	{
 		if (finishedFunnyMove)
