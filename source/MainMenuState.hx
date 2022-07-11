@@ -285,19 +285,6 @@ super.create();
 		}
 	}
 
-		super.create();
-
-		switch (FlxG.random.int(1, 2))
-            {
-            case 1:
-			char = new FlxSprite(1280, 0).loadGraphic(Paths.image(''));//put your cords and image here
-			char.frames = Paths.getSparrowAtlas('mainmenu/hellron');//here put the name of the xml
-			char.animation.addByPrefix('idleR', 'idle normal', 24, true);//on 'idle normal' change it to your xml one
-			char.animation.play('idleR');//you can rename the anim however you want to
-			char.scrollFactor.set();
-			FlxG.sound.play(Paths.sound('appear'), 2);
-			char.antialiasing = ClientPrefs.globalAntialiasing;
-			add(char);
 			
 	function changeItem(huh:Int = 0)
 	{
