@@ -48,6 +48,7 @@ class MainMenuState extends MusicBeatState
 	var blackbars2:FlxSprite;
 	var charS:FlxSprite;
 	var charF:FlxSprite;
+	var charD:FlxSprite;
 	var charO:FlxSprite;
 	var sus:Bool = false;
 	
