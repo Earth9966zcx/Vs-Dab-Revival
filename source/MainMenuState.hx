@@ -52,7 +52,31 @@ class MainMenuState extends MusicBeatState
 	
 
 	public static var finishedFunnyMove:Bool = false;
+	
+super.create();
 
+
+
+		switch (FlxG.random.int(1, 2))
+            {
+            case 1:
+    var char:FlxSprite = new FlxSprite(1280, 0);
+    char.loadGraphic(Paths.image('menushits/menuArts/menuChar1'));
+		char.scrollFactor.set();
+		char.scale.set(0.5, 0.5);
+		char.updateHitbox();
+    add(char);
+
+            case 2:
+    var char:FlxSprite = new FlxSprite(1280, 0);
+    char.loadGraphic(Paths.image('menushits/menuArts/menuChar2'));
+		char.scrollFactor.set();
+		char.scale.set(0.5, 0.5);
+		char.updateHitbox();
+    add(char);
+            }
+  }
+  
 	override function create()
 	{
 		#if windows
@@ -159,27 +183,6 @@ class MainMenuState extends MusicBeatState
 		addVirtualPad(UP_DOWN, A_B);
 		#end
 		
-super.create();
-
-		switch (FlxG.random.int(1, 2))
-            {
-            case 1:
-    var char:FlxSprite = new FlxSprite(1280, 0);
-    char.loadGraphic(Paths.image('menushits/menuArts/menuChar1'));
-		char.scrollFactor.set();
-		char.scale.set(0.5, 0.5);
-		char.updateHitbox();
-    add(char);
-
-            case 2:
-    var char:FlxSprite = new FlxSprite(1280, 0);
-    char.loadGraphic(Paths.image('menushits/menuArts/menuChar2'));
-		char.scrollFactor.set();
-		char.scale.set(0.5, 0.5);
-		char.updateHitbox();
-    add(char);
-            }
-  }
               
 	
 		super.create();
