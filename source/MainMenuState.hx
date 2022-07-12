@@ -161,7 +161,7 @@ class MainMenuState extends MusicBeatState
 		
 super.create();
 
-		switch (FlxG.random.int(1, 6))
+		switch (FlxG.random.int(1, 2))
             {
             case 1:
     var char:FlxSprite = new FlxSprite(1280, 0);
