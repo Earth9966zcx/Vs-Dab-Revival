@@ -74,9 +74,9 @@ super.create();
 		char.scale.set(0.5, 0.5);
 		char.updateHitbox();
     add(char);
-            }
-  }
-  
+
+
+
 	override function create()
 	{
 		#if windows
