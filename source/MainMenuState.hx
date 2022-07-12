@@ -118,6 +118,12 @@ class MainMenuState extends MusicBeatState
 		charS.visible = false;
 		charF.visible = true;
 		}
+		if (curSelected == 2) {
+		//nothing lmao
+		}
+		if (curSelected == 3) {
+		//nothing lmao
+		}
     
 
 		menuItems = new FlxTypedGroup<FlxSprite>();
