@@ -191,9 +191,6 @@ class MainMenuState extends MusicBeatState
 		#end
 		
 		
-		super.create();
-	}
-
 	var selectedSomethin:Bool = false;
 
 
