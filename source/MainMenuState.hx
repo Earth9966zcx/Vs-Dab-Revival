@@ -38,7 +38,6 @@ class MainMenuState extends MusicBeatState
 	var newGaming:FlxText;
 	var newGaming2:FlxText;
 	public static var firstStart:Bool = true;
-
 	public static var nightly:String = "";
 
 	public static var kadeEngineVer:String = "1.5.3" + nightly;
@@ -47,35 +46,14 @@ class MainMenuState extends MusicBeatState
 	var camFollow:FlxObject;
 	var blackbars:FlxSprite;
 	var blackbars2:FlxSprite;
-	var char:FlxSprite;
+	var charS:FlxSprite;
+	var charF:FlxSprite;
+	var charO:FlxSprite;
 	var sus:Bool = false;
 	
 
 	public static var finishedFunnyMove:Bool = false;
 	
-super.create();
-
-
-
-		switch (FlxG.random.int(1, 2))
-            {
-            case 1:
-    var char:FlxSprite = new FlxSprite(1280, 0);
-    char.loadGraphic(Paths.image('menushits/menuArts/menuChar1'));
-		char.scrollFactor.set();
-		char.scale.set(0.5, 0.5);
-		char.updateHitbox();
-    add(char);
-
-            case 2:
-    var char:FlxSprite = new FlxSprite(1280, 0);
-    char.loadGraphic(Paths.image('menushits/menuArts/menuChar2'));
-		char.scrollFactor.set();
-		char.scale.set(0.5, 0.5);
-		char.updateHitbox();
-    add(char);
-
-
 
 	override function create()
 	{
@@ -118,6 +96,29 @@ super.create();
 		blackbars2.screenCenter(X);
     add(blackbars2);
     
+    var charS:FlxSprite = new FlxSprite(0, 0);
+    charS.loadGraphic(Paths.image('menushits/menuArts/menuStorymode'));
+		charS.scrollFactor.set();
+		charS.updateHitbox();
+		charS.visible = false;
+    add(charS);
+    
+    var charF:FlxSprite = new FlxSprite(0, 0);
+    charF.loadGraphic(Paths.image('menushits/menuArts/menuFreeplay'));
+		charF.scrollFactor.set();
+		charF.updateHitbox();
+		charF.visible = false;
+    add(charF);
+    
+    if (curSelected == 0) {
+		charS.visible = true;
+		charF.visible = false;
+    }
+		if (curSelected == 1) {
+		charS.visible = false;
+		charF.visible = true;
+		}
+    
 
 		menuItems = new FlxTypedGroup<FlxSprite>();
 		add(menuItems);
@@ -151,7 +152,6 @@ super.create();
 		  if (firstStart) {
 		  	FlxTween.tween(blackbars2, {y: 0}, 1, {ease: FlxEase.expoInOut});
 				FlxTween.tween(blackbars, {y: 0}, 1, {ease: FlxEase.expoInOut});
-				FlxTween.tween(char, {x: 0}, 1, {ease: FlxEase.expoInOut});
 				{
 				  sus = true;
 				}}
