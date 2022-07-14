@@ -165,7 +165,6 @@ class MainMenuState extends MusicBeatState
 		  else
         blackbars.x += 0;
         blackbars2.x += 0;
-  {
 
 		firstStart = false;
 
@@ -194,7 +193,7 @@ class MainMenuState extends MusicBeatState
 	var selectedSomethin:Bool = false;
 
 
-	override function update(elapsed:Float)
+	override function update(elapsed:Float);
 	{
 		if (FlxG.sound.music.volume < 0.8)
 		{
@@ -235,7 +234,7 @@ class MainMenuState extends MusicBeatState
 					{
 						if (curSelected != spr.ID)
 						{
-              FlxTween.tween(spr, {alpha: 0}, 1.3, {
+						    FlxTween.tween(spr, {alpha: 0}, 1.3, {
 								ease: FlxEase.quadOut,
 								onComplete: function(twn:FlxTween)
 								{
