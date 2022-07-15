@@ -61,6 +61,9 @@ class OptionsMenu extends MusicBeatState
 			new BotPlay("Showcase your charts and mods with autoplay."),
 			new ScoreScreen("Show the score screen after the end of a song"),
 			new ShowInput("Display every single input in the score screen.")
+			if(DebugMode == true) {
+			new StageTest("Use for testing dab's stage.")
+			}
 		])
 		
 	];
