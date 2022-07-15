@@ -726,8 +726,12 @@ class PlayState extends MusicBeatState
 				}
 				case 'treepog':
 				  {
+						curStage = 'treepog';
+						
+						//imported shits from json
+						gf.visible= false;
 						defaultCamZoom = 0.9;
-						curStage = 'stage';
+						
 						var treesky:FlxSprite = new FlxSprite(-600, -300).loadGraphic(Paths.image('sky', 'weekdab'));
 						treesky.antialiasing = true;
 						treesky.scrollFactor.set(0.6, 0.6);
