@@ -724,6 +724,28 @@ class PlayState extends MusicBeatState
 	
 						add(stageCurtains);
 				}
+				case 'treepog':
+				  {
+						defaultCamZoom = 0.9;
+						curStage = 'stage';
+						var treesky:FlxSprite = new FlxSprite(-600, -300).loadGraphic(Paths.image('sky', 'weekdab'));
+						treesky.antialiasing = true;
+						treesky.scrollFactor.set(0.6, 0.6);
+						treesky.active = false;
+						add(treesky);
+	
+						var treestars:FlxSprite = new FlxSprite(-600, -300).loadGraphic(Paths.image('stars', 'weekdab'));
+						treestars.antialiasing = true;
+						treestars.scrollFactor.set(0.1, 0.1);
+						treestars.active = false;
+						add(treestars);
+	
+						var treeground:FlxSprite = new FlxSprite(-600, -100).loadGraphic(Paths.image('thebigboi', 'weekdab'));
+						treeground.antialiasing = true;
+						treeground.scrollFactor.set(0.9, 0.9);
+						treeground.active = false;
+						add(treeground);
+		  }
 			default:
 			{
 					defaultCamZoom = 0.9;
