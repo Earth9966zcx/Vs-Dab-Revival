@@ -697,9 +697,9 @@ class PlayState extends MusicBeatState
 								add(waveSpriteFG);
 						*/
 			}
-				case 'treepog':
+				case 'stage':
 				  {
-						curStage = 'treepog';
+						curStage = 'stage';
 						
 						//imported shits from json
 						gf.visible= false;
