@@ -22,6 +22,7 @@ class OptionsMenu extends MusicBeatState
 
 	var selector:FlxText;
 	var curSelected:Int = 0;
+	var DebugMode:Bool = true;
 
 	var options:Array<OptionCategory> = [
 		new OptionCategory("Gameplay", [
