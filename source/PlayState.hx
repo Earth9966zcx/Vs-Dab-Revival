@@ -736,7 +736,7 @@ class PlayState extends MusicBeatState
 						treesky.antialiasing = true;
 						treesky.scrollFactor.set(0.6, 0.6);
 						treesky.active = false;
-				    if (OptionsMenu.DebugMode == true) {
+				    if (OptionsMenu.StageTest == 'on') {
 						add(treesky);
 				    }
 	
@@ -744,7 +744,7 @@ class PlayState extends MusicBeatState
 						treestars.antialiasing = true;
 						treestars.scrollFactor.set(0.1, 0.1);
 						treestars.active = false;
-				    if (OptionsMenu.DebugMode == true) {
+				    if (OptionsMenu.StageTest == 'on') {
 						add(treestars);
 				    }
 	
@@ -752,7 +752,7 @@ class PlayState extends MusicBeatState
 						treeground.antialiasing = true;
 						treeground.scrollFactor.set(0.9, 0.9);
 						treeground.active = false
-				    if (OptionsMenu.DebugMode == true) {
+				    if (OptionsMenu.StageTest == 'on') {
 						add(treeground);
 				    }
 		  }
