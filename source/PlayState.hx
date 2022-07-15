@@ -751,7 +751,7 @@ class PlayState extends MusicBeatState
 						var treeground:FlxSprite = new FlxSprite(-600, -100).loadGraphic(Paths.image('thebigboi', 'weekdab'));
 						treeground.antialiasing = true;
 						treeground.scrollFactor.set(0.9, 0.9);
-						treeground.active = false
+						treeground.active = false;
 				    if (OptionsMenu.StageTest == 'on') {
 						add(treeground);
 				    }
